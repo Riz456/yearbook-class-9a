@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Album Kenangan | SMP 2 KALIWUNGU 2025</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <!-- Popup Pemberitahuan -->
+    <div class="notification-popup" id="notificationPopup">
+        <div class="popup-content">
+            <button class="popup-close" id="popupClose">&times;</button>
+            <div class="popup-icon">
+                <i class="fas fa-info-circle"></i>
+            </div>
+            <h3 class="popup-title">Hai, Sobat IX A!</h3>
+            <p class="popup-message">
+                Selamat datang di Album Kenangan Digital Kelas IX A SMP 2 Kaliwungu  
+
+Website ini kami buat sebagai ruang untuk mengenang kisah selama tiga tahun perjalanan yang penuh warna—dari canda di kelas, kerja sama di tiap tugas, sampai momen-momen kecil yang ternyata paling membekas.  
+
+Biar lebih hidup, yuk nyalakan musiknya dulu 🎶✨  
+Dan tak lupa, terima kasih yang tulus kami sampaikan kepada Bapak/Ibu Guru atas bimbingan, kesabaran, dan ketulusan hati selama ini. Setiap ilmu dan dukungan dari Bapak/Ibu adalah bagian penting dari perjalanan kami.  
+
+Semoga album ini bisa jadi pengingat indah untuk kita semua, sekarang dan nanti.
+
+            </p>
+            <div class="popup-options">
+                <label class="popup-checkbox">
+                    <input type="checkbox" id="dontShowAgain"> Jangan tampilkan lagi
+                </label>
+            </div>
+            <div class="popup-buttons">
+                <button class="popup-button" id="understandBtn">Mengerti</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button untuk membuka kembali popup -->
+    <button class="reopen-popup-btn" id="reopenPopupBtn" title="Buka Pemberitahuan">
+        <i class="fas fa-info-circle"></i>
+    </button>
+    <!-- Floating bubbles background -->
+ <!-- Floating particles background -->
+   <div class="particles">
+        <div class="particle" style="width: 300px; height: 300px; top: 10%; left: 5%; animation-delay: 0s;"></div>
+        <div class="particle" style="width: 200px; height: 200px; top: 60%; left: 70%; animation-delay: 2s;"></div>
+        <div class="particle" style="width: 250px; height: 250px; top: 30%; left: 40%; animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Modern glass header -->
+   <header class="header lazy-load">
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-memory"></i>
+            </div>
+            <div class="logo-text">Kelas Ix A</div>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav class="nav-links">
+            <a href="#home" class="nav-link">Beranda</a>
+            <a href="#timeline" class="nav-link">Linimasa</a>
+            <a href="#gallery" class="nav-link">Galeri</a>
+            <a href="#quotes" class="nav-link">Quotes</a>
+            <a href="#achievements" class="nav-link">Prestasi</a>
+            <a href="#team" class="nav-link">Struktur Kelas</a>
+            <a href="#contact" class="nav-link">Kontak</a>
+        </nav>
+        
+        <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#home" class="nav-link">Beranda</a>
+        <a href="#timeline" class="nav-link">Linimasa</a>
+        <a href="#gallery" class="nav-link">Galeri</a>
+        <a href="#quotes" class="nav-link">Quotes</a>
+        <a href="#achievements" class="nav-link">Prestasi</a>
+        <a href="#team" class="nav-link">Angkatan</a>
+        <a href="#contact" class="nav-link">Kontak</a>
+    </div>
+
+    <!-- Student Bio Popup -->
+   <div class="bio-overlay" id="bioOverlay"></div>
+<div class="student-bio" id="studentBio">
+    <button class="student-bio-close" id="bioClose">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="student-bio-header">
+        <img src="" alt="Ini Foto" class="student-bio-avatar" id="bioAvatar">
+        <div>
+            <h3 class="student-bio-name" id="bioName"></h3>
+            <p class="student-bio-class" id="bioClass"></p>
+        </div>
+    </div>
+    <div class="student-bio-content" id="bioContent"></div>
+
+    <!-- Tombol Download Foto -->
+    <div class="student-bio-download">
+        <button id="downloadPhotoBtn" class="download-btn">
+            <i class="fas fa-download"></i> Download Foto
+        </button>
+    </div>
+</div>
+
+    <!-- Hero section with modern design -->
+    <section class="hero lazy-load" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Yearbook IX A<br>2024-2025</h1>
+            <p class="hero-subtitle">Mengabadikan setiap tawa, cerita, dan momen berharga selama perjalanan kami di SMP 2 Kaliwungu—kenangan yang tak akan pernah pudar.</p>
+            <a href="#gallery" class="cta-button">
+                <i class="fas fa-images"></i> Jelajahi Kenangan
+            </a>
+        </div>
+        <div class="scroll-mouse">
+            <div class="mouse"></div>
+            <div class="scroll-text">Scroll ke bawah</div>
+        </div>
+        
+        <!-- Floating decorative elements -->
+        <div class="floating" style="top: 20%; left: 10%; font-size: 2rem; color: var(--secondary);">✧</div>
+        <div class="floating" style="top: 70%; left: 85%; font-size: 2.5rem; color: var(--primary); animation-delay: 1s;">✦</div>
+        <div class="floating" style="top: 40%; left: 80%; font-size: 3rem; color: var(--accent); animation-delay: 2s;">✿</div>
+    </section>
+
+    <!-- Student Search Section -->
+     <section class="section lazy-load delay-1" id="search-section">
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="studentSearch" class="search-input" placeholder="Cari namamu disini yuk...">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+    </section>
+    
+    <!-- Teacher Cards Section - Compact Version -->
+<section class="section lazy-load delay-3" id="teachers">
+    <h2 class="section-title">Guru Pengajar</h2>
+    
+    <div class="teachers-container compact">
+        
+      <!-- Mulai dari Guru 1 sampai Guru 24 -->
+    <!-- Guru 1 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/mahbub.png')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Drs Mahbub</h3>
+            <p class="teacher-subject">Agama Islam</p>
+        </div>
+    </div>
+
+    <!-- Guru 2 sampai 24 -->
+    <!-- Bisa kamu salin dan edit sesuai kebutuhan -->
+    <!-- Auto generate kode di bawah -->
+    <!-- Mulai dari Guru 2 sampai Guru 24 -->
+    <!-- Kamu bisa pakai pengulangan di backend kalau mau lebih dinamis -->
+    <!-- Berikut sisanya secara manual -->
+
+    <!-- Guru 2 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/11.JPG')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Trimo, S.Pd</h3>
+            <p class="teacher-subject">Ipa</p>
+        </div>
+    </div>
+
+    <!-- Guru 3 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/19.JPG')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Uning Saptorini, S.Pd</h3>
+            <p class="teacher-subject">Ppkn</p>
+        </div>
+    </div>
+
+    <!-- Guru 4 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/47.JPG')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Wardoyo, S.Pd</h3>
+            <p class="teacher-subject">Ipa</p>
+        </div>
+    </div>
+
+    <!-- Guru 5 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/25.JPG')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Suharmi, S.Pd</h3>
+            <p class="teacher-subject">Bahasa Jawa</p>
+        </div>
+    </div>
+
+    <!-- Guru 6 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/43.JPG')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Herlina Etik Yuliani, S.Pd</h3>
+            <p class="teacher-subject">Bahasa Indonesia</p>
+        </div>
+    </div>
+
+    <!-- Guru 7 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/07.JPG')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Nugroho Adi Suseno, SE, M.Pd</h3>
+            <p class="teacher-subject">Ips</p>
+        </div>
+    </div>
+
+    <!-- Guru 8 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/35.JPG')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Siti Salsiyah, S.Pd</h3>
+            <p class="teacher-subject">Bahasa Inggris</p>
+        </div>
+    </div>
+
+    <!-- Guru 9 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/29.JPG')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Supriyanti, S.Pd</h3>
+            <p class="teacher-subject">Bimbingan Konseling</p>
+        </div>
+    </div>
+
+    <!-- Guru 10 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/17.JPG')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Agus Sutarto, S.Th</h3>
+            <p class="teacher-subject">Agama Kristen</p>
+        </div>
+    </div>
+
+    <!-- Guru 11 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/49.JPG')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Muhammad Wazir Musahar, S.Pd</h3>
+            <p class="teacher-subject">Bahasa Inggris</p>
+        </div>
+    </div>
+
+    <!-- Guru 12 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/45.JPG')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Wahyu Setyanto, S.Pd</h3>
+            <p class="teacher-subject">Matematika</p>
+        </div>
+    </div>
+
+    <!-- Guru 13 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/agung.png')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Agung Nugroho, S.Kom, M.Kom</h3>
+            <p class="teacher-subject">Informatika</p>
+        </div>
+    </div>
+
+    <!-- Guru 14 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/13.JPG')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Tri Harsono, S.Pd</h3>
+            <p class="teacher-subject">Ips</p>
+        </div>
+    </div>
+
+    <!-- Guru 15 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/01.JPG')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Nur Prapti Widya Ningrum, S.Pd</h3>
+            <p class="teacher-subject">Prakrya</p>
+        </div>
+    </div>
+
+    <!-- Guru 16 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/images.png')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Nova Gunawan</h3>
+            <p class="teacher-subject">Pjok</p>
+        </div>
+    </div>
+
+    <!-- Guru 17 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/images.png')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Suciana Ramadhani, S.Pd</h3>
+            <p class="teacher-subject">Matematika</p>
+        </div>
+    </div>
+
+    <!-- Guru 18 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/23.JPG')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Wakhid Nurhadi, S.Pd</h3>
+            <p class="teacher-subject">Ppkn</p>
+        </div>
+    </div>
+
+    <!-- Guru 19 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/27.JPG')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Dian Hayati Rahman, S.Pd</h3>
+            <p class="teacher-subject">Bahasa Indonesia</p>
+        </div>
+    </div>
+
+    <!-- Guru 20 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/jamila.png')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Jamila Imani, S.Pd</h3>
+            <p class="teacher-subject">Bahasa Indonesia</p>
+        </div>
+    </div>
+
+    <!-- Guru 21 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/images.png')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Lathiifatunnabiila, S.Psi</h3>
+            <p class="teacher-subject">Bimbingan Konseling</p>
+        </div>
+    </div>
+
+    <!-- Guru 22 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/41.JPG')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Retno Wijayanti, SH</h3>
+            <p class="teacher-subject">Agama Islam</p>
+        </div>
+    </div>
+
+    <!-- Guru 23 -->
+    <div class="teacher-card compact">
+        <div class="teacher-avatar" style="background-image: url('guru/foto-guru/31.JPG')"></div>
+        <div class="teacher-info">
+            <h3 class="teacher-name">Ratu Sri Mukti, S.Pd</h3>
+            <p class="teacher-subject">Matematika</p>
+        </div>
+    </div>
+</div>
+        <!-- Add more teachers as needed -->
+        <!-- Duplicate this block for each teacher -->
+    </div>
+</section>
+    
+    <!-- Quotes Section -->
+    <section class="section" id="quotes">
+        <h2 class="section-title">Quotes</h2>
+        
+        <div class="quote-carousel-container">
+            <div class="quote-carousel">
+                <!-- Student 1 -->
+              <!-- Student 1 -->
+<div class="quote-card">
+    <div class="quote-image" style="background-image: url('foto/img1.JPG')"></div>
+    <div class="quote-content">
+        <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+        </div>
+        <p class="quote-text">"Tiga tahun berlalu begitu cepat, tapi setiap kenangan bersama akan selalu hidup dalam ingatan."</p>
+        <p class="quote-author">- Arfia Bunga Jelita</p>
+    </div>
+</div>
+
+<!-- Student 2 -->
+<div class="quote-card">
+    <div class="quote-image" style="background-image: url('foto/img2.JPG')"></div>
+    <div class="quote-content">
+        <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+        </div>
+        <p class="quote-text">"SMP 2 Kaliwungu bukan sekadar tempat belajar, tapi rumah kedua yang penuh tawa dan cerita berharga."</p>
+        <p class="quote-author">- Bagus Adrian Ramadhani</p>
+    </div>
+</div>
+
+<!-- Student 3 -->
+<div class="quote-card">
+    <div class="quote-image" style="background-image: url('foto/img3.JPG')"></div>
+    <div class="quote-content">
+        <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+        </div>
+        <p class="quote-text">"Persahabatan yang terjalin di sini adalah harta yang akan kami bawa sepanjang hidup."</p>
+        <p class="quote-author">- Chika Dyah Permata</p>
+    </div>
+</div>
+
+<!-- Student 4 -->
+<div class="quote-card">
+    <div class="quote-image" style="background-image: url('foto/img4.JPG')"></div>
+    <div class="quote-content">
+        <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+        </div>
+        <p class="quote-text">"Kegagalan bukan akhir, melainkan awal untuk bangkit dan melangkah lebih jauh."</p>
+        <p class="quote-author">- Dafa Prakoso</p>
+    </div>
+</div>
+
+<!-- Student 5 -->
+<div class="quote-card">
+    <div class="quote-image" style="background-image: url('foto/img5.JPG')"></div>
+    <div class="quote-content">
+        <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+        </div>
+        <p class="quote-text">"Belajar bukan hanya untuk nilai, tapi untuk masa depan yang lebih baik."</p>
+        <p class="quote-author">- Danian Nova Pratama</p>
+    </div>
+</div>
+
+<!-- Student 6 -->
+<div class="quote-card">
+    <div class="quote-image" style="background-image: url('foto/img6.JPG')"></div>
+    <div class="quote-content">
+        <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+        </div>
+        <p class="quote-text">"Setiap hari adalah kesempatan baru untuk menjadi pribadi yang lebih baik."</p>
+        <p class="quote-author">- Deva Nur Hayati</p>
+    </div>
+</div>
+
+<!-- Student 7 -->
+<div class="quote-card">
+    <div class="quote-image" style="background-image: url('foto/img7.JPG')"></div>
+    <div class="quote-content">
+        <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+        </div>
+        <p class="quote-text">"Mimpi akan menjadi nyata jika disertai usaha dan tindakan yang sungguh-sungguh."</p>
+        <p class="quote-author">- Devianto Eka Wahyu Pratama</p>
+    </div>
+</div>
+
+<!-- Student 8 -->
+<div class="quote-card">
+    <div class="quote-image" style="background-image: url('foto/img8.JPG')"></div>
+    <div class="quote-content">
+        <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+        </div>
+        <p class="quote-text">"Kesuksesan lahir dari kebiasaan kecil yang dilakukan dengan konsisten setiap hari."</p>
+        <p class="quote-author">- Dwi Sakti Nugraha</p>
+    </div>
+</div>
+
+<!-- Student 9 -->
+<div class="quote-card">
+    <div class="quote-image" style="background-image: url('foto/img9.JPG')"></div>
+    <div class="quote-content">
+        <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+        </div>
+        <p class="quote-text">"Jangan takut gagal, karena dari situlah proses belajar dimulai."</p>
+        <p class="quote-author">- Firman Pratama</p>
+    </div>
+</div>
+
+<!-- Student 10 -->
+<div class="quote-card">
+    <div class="quote-image" style="background-image: url('foto/img10.JPG')"></div>
+    <div class="quote-content">
+        <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+        </div>
+        <p class="quote-text">"Masa sekolah adalah waktu terbaik untuk mengenal diri dan menemukan potensi."</p>
+        <p class="quote-author">- Gatra Bangkit Ardian</p>
+    </div>
+</div>
+   <!-- Student 11 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('foto/img11.JPG')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Teman sejati adalah mereka yang tetap ada di saat suka maupun duka."</p>
+                <p class="quote-author">- Giska Erra Fazira</p>
+            </div>
+        </div>
+
+        <!-- Student 12 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('foto/img12.JPG')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Disiplin adalah jembatan antara tujuan dan pencapaian."</p>
+                <p class="quote-author">- Haris Setiyawan</p>
+            </div>
+        </div>
+
+        <!-- Student 13 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('foto/img13.JPG')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Ilmu yang bermanfaat adalah investasi terbaik untuk masa depan."</p>
+                <p class="quote-author">- Ilham Maulana</p>
+            </div>
+        </div>
+
+        <!-- Student 14 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('foto/img14.JPG')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Kesederhanaan adalah kecantikan sejati yang tak pernah pudar."</p>
+                <p class="quote-author">- Irma Nur Azizah</p>
+            </div>
+        </div>
+
+        <!-- Student 15 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('foto/img15.JPG')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Kejujuran adalah mata uang yang berlaku di semua zaman."</p>
+                <p class="quote-author">- Ivan Setiawan</p>
+            </div>
+        </div>
+
+        <!-- Student 16 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('foto/img16.JPG')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Mimpi besar dimulai dengan langkah kecil yang berani."</p>
+                <p class="quote-author">- Juan Faizal Halim</p>
+            </div>
+        </div>
+
+        <!-- Student 17 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('foto/img17.JPG')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Kreativitas adalah kecerdasan yang bersenang-senang."</p>
+                <p class="quote-author">- Leni Cahya Rini</p>
+            </div>
+        </div>
+
+        <!-- Student 18 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('foto/img18.JPG')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Kebaikan yang kita sebarkan hari ini akan menjadi kebahagiaan di masa depan."</p>
+                <p class="quote-author">- Makhayna Syifa Wijayanti</p>
+            </div>
+        </div>
+
+        <!-- Student 19 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('foto/img19.JPG')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Kesuksesan sejati adalah ketika kita bisa bermanfaat bagi orang lain."</p>
+                <p class="quote-author">- Maura Alika Ramadhani</p>
+            </div>
+        </div>
+
+        <!-- Student 20 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('foto/img20.JPG')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Teknologi adalah alat, tapi manusia tetaplah yang paling penting."</p>
+                <p class="quote-author">- Mohammad Aris Febriyanto</p>
+            </div>
+        </div>
+
+        <!-- Student 21 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('foto/img21.JPG')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Konsistensi adalah kunci dari semua prestasi besar."</p>
+                <p class="quote-author">- Muhammad Alfin Nugroho</p>
+            </div>
+        </div>
+
+        <!-- Student 22 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('foto/img22.JPG')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Kecantikan sejati berasal dari hati yang baik dan pikiran yang positif."</p>
+                <p class="quote-author">- Nadia Vega Maharani</p>
+            </div>
+        </div>
+
+        <!-- Student 23 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('foto/img23.JPG')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Semangat pantang menyerah akan membawa kita melewati semua rintangan."</p>
+                <p class="quote-author">- Riky Ahmad Sarifudin</p>
+            </div>
+        </div>
+
+        <!-- Student 24 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('kenangan/rizky-ganteng.png')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Kualitas diri kita ditentukan oleh bagaimana kita menghadapi tantangan."</p>
+                <p class="quote-author">- Rizky Mustafa Afrino</p>
+            </div>
+        </div>
+
+        <!-- Student 25 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('foto/img25.JPG')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Kepemimpinan dimulai dengan kemampuan memimpin diri sendiri."</p>
+                <p class="quote-author">- Safa Eriana Eriantika</p>
+            </div>
+        </div>
+
+        <!-- Student 26 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('foto/img26.JPG')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Kesabaran adalah teman terbaik dalam mencapai kesuksesan."</p>
+                <p class="quote-author">- Sahid Hidayatullah</p>
+            </div>
+        </div>
+
+        <!-- Student 27 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('foto/img27.JPG')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Masa depan yang cerah dimulai dengan persiapan hari ini."</p>
+                <p class="quote-author">- Yanuar Faiz Putra Eriyanto</p>
+            </div>
+        </div>
+
+        <!-- Student 28 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('foto/img28.JPG')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Kecerdasan emosional sama pentingnya dengan kecerdasan intelektual."</p>
+                <p class="quote-author">- Yunita Dhia Zahrani</p>
+            </div>
+        </div>
+
+        <!-- Student 29 -->
+        <div class="quote-card">
+            <div class="quote-image" style="background-image: url('foto/img29.JPG')"></div>
+            <div class="quote-content">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="quote-text">"Kebaikan kecil yang kita lakukan hari ini bisa berarti besar bagi orang lain."</p>
+                <p class="quote-author">- Zahrotus Syifa</p>
+            </div>
+        </div>
+            </div>
+            
+            <button class="carousel-control prev" aria-label="Previous quote">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-control next" aria-label="Next quote">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+<section class="stats-section">
+    <div class="stats-container">
+        <div class="stat-item">
+            <div class="stat-number" data-count="29">0</div>
+            <div class="stat-label">Siswa</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-count="3">0</div>
+            <div class="stat-label">Tahun Bersama</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-count="1000">0</div>
+            <div class="stat-label">Momen Berharga</div>
+        </div>
+    </div>
+</section>
+
+    <!-- Achievements Section -->
+    <section class="section" id="achievements" style="background-color: var(--primary-light);">
+        <h2 class="section-title">Prestasi Kelas</h2>
+        
+        <div class="achievements-container">
+            <div class="achievement-card">
+                <div class="achievement-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3 class="achievement-title">Juara 3 Lomba Voli Class Meeting</h3>
+                <p class="achievement-desc">Tim voli IX A meraih juara 3 dalam kompetisi selepas ujian disekolah.</p>
+                <p class="achievement-year"><i class="far fa-calendar-alt"></i> 2024</p>
+            </div>
+            
+            <div class="achievement-card">
+                <div class="achievement-icon">
+                    <i class="fas fa-medal"></i>
+                </div>
+                <h3 class="achievement-title">Juara 1 Pentas Seni</h3>
+                <p class="achievement-desc">Penampilan kreatif kelas IX A memukau juri dan meraih juara pertama.</p>
+                <p class="achievement-year"><i class="far fa-calendar-alt"></i> 2024</p>
+            </div>
+            
+            <div class="achievement-card">
+                <div class="achievement-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3 class="achievement-title">Kelas Terdisiplin</h3>
+                <p class="achievement-desc">Mendapat penghargaan sebagai kelas terdisiplin selama 3 bulan berturut-turut.</p>
+                <p class="achievement-year"><i class="far fa-calendar-alt"></i> 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline section -->
+    <section class="section" id="timeline">
+        <h2 class="section-title">Linimasa Kenangan</h2>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">
+                        <i class="far fa-calendar-alt"></i> Juli 2024
+                    </div>
+                    <h3 class="timeline-title">Hari Pertama Masuk Kelas 9</h3>
+                    <p class="timeline-desc">Masih inget ngga?, momen pertama kali kita ketemu sebagai satu angkatan! Awalnya masih pada gugup, ada yang diem-diem cool, ada yang excited banget. Tapi lama-lama, semua ketegangan berubah jadi obrolan seru, ketawa bareng, dan kebersamaan yang nggak bakal tergantikan. Dari strangers jadi family—itu vibe yang keren tau!</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">
+                        <i class="far fa-calendar-alt"></i> November 2024
+                    </div>
+                    <h3 class="timeline-title">Hari Guru Nasional</h3>
+                    <p class="timeline-desc">Momen haru dan lawak memberi kenangan berkesan ke bapak wali kelas</p>
+                    <div class="timeline-images">
+                        <img src="kenangan/IMG-20250601-WA0037.jpg" alt="Kepo" class="timeline-img">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">
+                        <i class="far fa-calendar-alt"></i> Maret 2021
+                    </div>
+                    <h3 class="timeline-title">Class Meeting Dan Gelar Karya</h3>
+                    <p class="timeline-desc">Kompetisi seru antar kelas yang mempererat persahabatan dan menguji sportivitas serta kerja sama tim.</p>
+                    <div class="timeline-images">
+                        <img src="kenangan/IMG_20241102_083059_472.jpg" class="timeline-img">
+                        <img src="kenangan/IMG_20241102_095746_190.jpg" alt="Class Meeting" class="timeline-img">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content" onclick="location.href='https://drive.google.com/drive/folders/1qBm2SpbY8_mJxkdmpYp8kBbmwfeXWcPA'">
+                    <div class="timeline-date">
+                        <i class="far fa-calendar-alt"></i> Mei 2024
+                    </div>
+                    <h3 class="timeline-title">Study Tour Ke Malang</h3>
+                    <p class="timeline-desc">Seru, random, penuh tawa—outing class ke Malang bakal jadi cerita yang nggak akan kita lupain. Dari perjalanan rame-rame, foto yang kocak, sampai momen kebersamaan yang makin erat.  
+
+Bukan cuma tempat yang kita kunjungi, tapi juga vibes bareng satu angkatan yang bikin semuanya spesial. Memories ini bakal tetap ada, kapan pun kita bernostalgia.  
+
+Best trip, best squad. Sampai jumpa di petualangan berikutnya! .</p>
+                    <div class="timeline-images">
+                        <img src="kenangan/IMG_20240507_132613_143.jpg" alt="Study Tour" class="timeline-img">
+                        <img src="kenangan/IMG_20240507_062018_868.jpg" alt="Study Tour" class="timeline-img">
+                        <img src="kenangan/IMG_20240507_130601_677.jpg" alt="Study Tour" class="timeline-img">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-item" onclick="location.href='https://drive.google.com/drive/folders/1md1fkGHszc5IGIMFdwTOtId_0U-Nixdt?usp=drive_link'">
+                <div class="timeline-content">
+                    <div class="timeline-date">
+                        <i class="far fa-calendar-alt"></i> 2 Juni 2025
+                    </div>
+                    <h3 class="timeline-title">Wasana Warsa (kelulusan)</h3>
+                    <p class="timeline-desc">Titik akhir perjalanan kami di SMP 2 Kaliwungu—penuh haru, bahagia, dan kenangan tak terlupakan. Saatnya melangkah ke jenjang lebih tinggi, membawa cerita dan pelajaran berharga. Bukan perpisahan, tapi awal baru!.</p>
+                    <div class="timeline-images">
+                        <img src="kenangan/wasana.JPG" alt="Kelulusan" class="timeline-img">
+                        <img src="kenangan/IMG_20250602_101556_956.jpg" alt="Kelulusan" class="timeline-img">
+                        <img src="kenangan/piagam.jpg" alt="Kelulusan" class="timeline-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Music Player Section -->
+    <section class="music-player-section">
+      <div class="music-status" id="musicStatus"></div>
+        <div class="music-player-container vintage-player">
+            <div class="vintage-header">
+                <div class="vintage-knobs">
+                    <div class="knob"></div>
+                    <div class="knob"></div>
+                </div>
+                <div class="vintage-title">Vintage Player</div>
+                <div class="vintage-brand">SMP2KWLG '25</div>
+            </div>
+            
+            <div class="vintage-display">
+                <div class="tape-deck">
+                    <div class="tape"></div>
+                    <div class="tape-reels">
+                        <div class="reel left-reel"></div>
+                        <div class="reel right-reel"></div>
+                    </div>
+                </div>
+                <div class="song-info">
+                    <div class="song-title" id="nowPlayingTitle">Memories - Maroon 5</div>
+                    <div class="song-album" id="nowPlayingAlbum">Album Kenangan IX A</div>
+                    <div class="song-counter" id="songCounter">1/5</div>
+                </div>
+            </div>
+            
+            <audio id="backgroundMusic"></audio>
+            
+            <div class="playlist-container">
+                <div class="playlist-scroll">
+                    <div class="playlist-item active" data-src="music/iwan.mp3" data-title="Memories - Maroon 5" data-album="Album Kenangan IX A">
+                        <span class="playlist-number">1</span>
+                        <span class="playlist-title">Memories - Maroon 5</span>
+                        <span class="playlist-duration">3:45</span>
+                    </div>
+                    <div class="playlist-item" data-src="music/untuk-kita.mp3" data-title="Untuk Kita - The Overtunes" data-album="Album Kenangan IX A">
+                        <span class="playlist-number">2</span>
+                        <span class="playlist-title">Untuk Kita - The Overtunes</span>
+                        <span class="playlist-duration">4:12</span>
+                    </div>
+                    <div class="playlist-item" data-src="music/see-you-again.mp3" data-title="See You Again - Wiz Khalifa" data-album="Album Kenangan IX A">
+                        <span class="playlist-number">3</span>
+                        <span class="playlist-title">See You Again - Wiz Khalifa</span>
+                        <span class="playlist-duration">3:58</span>
+                    </div>
+                    <div class="playlist-item" data-src="music/graduation.mp3" data-title="Graduation - Vitamin C" data-album="Album Kenangan IX A">
+                        <span class="playlist-number">4</span>
+                        <span class="playlist-title">Graduation - Vitamin C</span>
+                        <span class="playlist-duration">4:15</span>
+                    </div>
+                    <div class="playlist-item" data-src="music/best-day-of-my-life.mp3" data-title="Best Day Of My Life - American Authors" data-album="Album Kenangan IX A">
+                        <span class="playlist-number">5</span>
+                        <span class="playlist-title">Best Day Of My Life</span>
+                        <span class="playlist-duration">3:20</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="vintage-controls">
+                <button class="control-btn" id="prevBtn">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="control-btn play-btn" id="musicToggle">
+                    <i class="fas fa-play" id="musicIcon"></i>
+                </button>
+                <button class="control-btn" id="nextBtn">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+            </div>
+            
+            <div class="progress-container">
+                <div class="time-current" id="timeCurrent">0:00</div>
+                <input type="range" id="progressBar" class="vintage-slider" min="0" max="100" value="0">
+                <div class="time-total" id="timeTotal">0:00</div>
+            </div>
+            
+            <div class="vintage-volume">
+                <i class="fas fa-volume-down volume-icon"></i>
+                <input type="range" id="volumeSlider" class="vintage-slider" min="0" max="1" step="0.1" value="0.7">
+                <i class="fas fa-volume-up volume-icon"></i>
+            </div>
+            
+            <div class="vintage-footer">
+                <div class="frequency-display">FM 98.7</div>
+                <div class="playback-mode" id="playbackMode">
+                    <i class="fas fa-redo" title="Repeat All"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery section -->
+     <section class="section lazy-load delay-2" id="gallery" style="background-color: var(--primary-light);">
+        <h2 class="section-title">Galeri Kenangan</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="foto/Guru _ SMP NEGERI 2 KALIWUNGU_20250605_070535_0000.png" alt="Momen Sekolah" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3 class="gallery-title">Guru Pengajar</h3>
+                    <p class="gallery-date">SMP NEGERI 2 KALIWUNGU</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="kenangan/k.png" alt="Momen Sekolah" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3 class="gallery-title">Kelas IX</h3>
+                    <p class="gallery-date">2024-2025</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="kenangan/IMG-20250323-WA0041.jpg" alt="Momen Sekolah" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3 class="gallery-title">Kegiatan Buka Bersama</h3>
+                    <p class="gallery-date">2024</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="kenangan/IMG_20241102_095746_190.jpg" alt="Momen Sekolah" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3 class="gallery-title">Pentas Seni Fashion Show</h3>
+                    <p class="gallery-date">2024</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" onclick="location.href='https://drive.google.com/drive/folders/1md1fkGHszc5IGIMFdwTOtId_0U-Nixdt?usp=drive_link'">
+                <img src="kenangan/wasana.JPG" alt="Momen Sekolah" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3 class="gallery-title">Wasana Warsa</h3>
+                    <p class="gallery-date">2-Juni-2025</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="kenangan/y.jpg" alt="Momen Sekolah" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3 class="gallery-title">Ujian Praktek Drama</h3>
+                    <p class="gallery-date">B.Indonesia</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="kenangan/hm.jpg" alt="Momen Sekolah" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3 class="gallery-title">Ujian Praktek Drama</h3>
+                    <p class="gallery-date">B.Indonesia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team section -->
+    <section class="section" id="team">
+        <h2 class="section-title">Struktur Kelas</h2>
+        
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="kenangan/rizky-ganteng.png" alt="Anggota Angkatan" class="member-avatar">
+                <h3 class="member-name">Rizky Mustafa Afrino</h3>
+                <p class="member-role">Ketua Kelas</p>
+                <p class="member-desc">.</p>
+                <div class="member-social">
+                    <a href="https://instagram.com/riz_456d" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@riz_m.af?_t=ZS-8wpoPYSE1NX&_r=1" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    <a href="mailto:bambamstudio04@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            
+            <div class="team-member">
+                <img src="foto/IMG-20250602-WA0083.jpg" alt="Anggota Angkatan" class="member-avatar">
+                <h3 class="member-name">Maura Alika Ramadhani</h3>
+                <p class="member-role">Wakil Ketua</p>
+                <p class="member-desc">Kreatif dan inovatif, selalu punya ide segar untuk kegiatan angkatan dan gampang emosi.</p>
+                <div class="member-social">
+                    <a href="404.html" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="404.html" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="404.html" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+  <footer class="footer lazy-load delay-3" id="contact">
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">
+                        <i class="fas fa-memory"></i>
+                    </div>
+                    <div class="footer-logo-text">Kelas Ix A 2025</div>
+                </div>
+                    <p  class="footer-desc">Website ini dibuat untuk mengenang momen momen indah kelas 9A SMP Negeri 2 Kaliwungu tahun ajaran 2024/2025.</p>
+                    <p  class="footer-desc">Setiap momen, tawa, canda, bahkan air mata yang kita lewati bersama akan tetap hidup dalam kenangan ini.</p>
+                    <p  class="footer-desc">Terima kasih untuk semua kenangan indah yang telah kita buat bersama.</p>
+                
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/speroka_9a?igsh=eXN3d2d4aXBlOWFr" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">Tautan Cepat</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="#home"><i class="fas fa-chevron-right"></i> Beranda</a></li>
+                    <li class="footer-link"><a href="#timeline"><i class="fas fa-chevron-right"></i> Linimasa</a></li>
+                    <li class="footer-link"><a href="#gallery"><i class="fas fa-chevron-right"></i> Galeri</a></li>
+                    <li class="footer-link"><a href="#team"><i class="fas fa-chevron-right"></i> Struktur Kelas</a></li>
+                    <li class="footer-link"><a href="#contact"><i class="fas fa-chevron-right"></i> Kontak</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">Kontak Kami</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="https://maps.app.goo.gl/CAtTTxb3X3EW5rGLA"><i class="fas fa-map-marker-alt"></i> Jl. Simo-Boyolali KM.7, Desa Papringan, Kec. Kaliwungu, Kab. Semarang</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Album Kenangan SMP 2 KALIWUNGU Angkatan 2024-2025. Seluruh hak cipta dilindungi.</p>
+        </div>
+    </footer>
+   <script src="js/lazy-load.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
