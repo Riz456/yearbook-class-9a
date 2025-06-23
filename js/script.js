@@ -172,7 +172,7 @@
         "id": 24,
         "name": "Rizky Mustafa Afrino",
         "class": "IX A",
-        "avatar": "kenangan/rizky-ganteng.png",
+        "avatar": "guru/foto-guru/r.png",
         "bio": "Eh, ada yang kepo yaa? 😄 Hehe, becanda kok!  By the way, sedikit info aja nih... Website ini dibuat langsung oleh saya sendiri loh!, Walau ada bantuan ai-nya,heheheee."
     },
     {
@@ -559,9 +559,9 @@ let isLoading = false;
 const songs = [
     {
         src: "music/iwan.mp3",
-        title: "Memories - Maroon 5",
+        title: "Jendela Kelas 1 - Iwan Fals",
         album: "Album Kenangan IX A",
-        duration: "3:45"
+        duration: "3:34"
     },
     {
         src: "music/untuk-kita.mp3",
