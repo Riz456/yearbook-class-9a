@@ -564,29 +564,23 @@ const songs = [
         duration: "3:34"
     },
     {
-        src: "music/untuk-kita.mp3",
-        title: "Untuk Kita - The Overtunes",
+        src: "music/monokrom.mp3",
+        title: "Monokrom- Tulus",
         album: "Album Kenangan IX A",
-        duration: "4:12"
+        duration: "3:34"
     },
     {
-        src: "music/see-you-again.mp3",
-        title: "See You Again - Wiz Khalifa",
+        src: "music/17.mp3",
+        title: "Tujuh Belas - Tulus",
         album: "Album Kenangan IX A",
-        duration: "3:58"
+        duration: "2:58"
     },
     {
-        src: "music/graduation.mp3",
-        title: "Graduation - Vitamin C",
+        src: "music/nina.mp3",
+        title: "Nina - Feast",
         album: "Album Kenangan IX A",
         duration: "4:15"
     },
-    {
-        src: "music/best-day-of-my-life.mp3",
-        title: "Best Day Of My Life - American Authors",
-        album: "Album Kenangan IX A",
-        duration: "3:20"
-    }
 ];
 
 // Initialize player
